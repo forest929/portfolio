@@ -46,7 +46,9 @@ nav ul li {
     margin: 0 0;
     padding:0;
 }
-
+sup {
+    margin:0;
+}
 nav ul li a {
     text-decoration: none;
     color: #333;
@@ -82,12 +84,24 @@ p, ul li {
     margin-left:0;
     color: #124736;
 }
+ul li a , a {
+  color: #124736; /* Main text color */
+  text-decoration: underline;
+}
 
+em {
+   margin:0;
+}
+
+ul li a:hover {
+  color: #22be68;
+  text-decoration-color: #22be68; /* Change underline on hover */
+}
 
 
 .grid-container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr; /* Top and Bottom for Left Section */
+    grid-template-rows: 1fr;
     justify-content: center;
     display: grid;
     height: 5 px;
@@ -96,6 +110,11 @@ p, ul li {
 
 .left-section {
     background-color: black;
+    align-items: center;
+    margin-bottom: 5%;
+    max-width: 60%;
+    margin-top:0;
+    margin-left:15%;
 }
 .bottom-left {
     display: grid;
@@ -117,56 +136,72 @@ p, ul li {
 }
 .right-section {
     display: grid;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-top: 0%;
+    margin-left:0;
 
 }
 
 .agrivoltaics-grid-container {
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 2.5fr;
     justify-content: center;
     display: grid;
     height: 5 px;
     width:100%;
 }
 
+.agrivoltaics-left-section {
+    margin-left: 0;
+}
+.agrivoltaics-left-section img {
+    max-width: 100%;
+}
+.agrivoltaics-right-section {
+    margin-right: 15%;
+}
 
-footer {
-    text-align: center;
-    padding: 1.5rem 0;
+
+.website-icons {
+    text-align: left ;
+    margin-left:0;
+    padding: 0rem 0;
     background-color: #f9f9f9;
   }
   
-.footer-icons a {
-    margin: 0 10px;
-    font-size: 1.4rem;
+.website-icons a {
+    margin: 0;
+    font-size: 1.6rem;
     color: #444;
     text-decoration: none;
 }
   
   
 /* LinkedIn: Blue on hover */
-.footer-icons a[href*="linkedin"]:hover {
+.website-icons a[href*="linkedin"]:hover {
 color: #0077b5;
 }
 
 /* ORCID: Olive green on hover */
-.footer-icons a[href*="orcid"]:hover {
+.website-icons a[href*="orcid"]:hover {
 color: olive;
 }
 
 /* ResearchGate: White on hover */
-.footer-icons a[href*="researchgate"]:hover {
+.website-icons a[href*="researchgate"]:hover {
 color: black;
 }
   
-.main-body {
+.main-body,{
     margin-left: 3%;
-    margin-right: 3%;
-}  
+    margin-right: 9%;
+}
+
+
+
 .aboutMe-content {
     column-count: 2;
     column-gap: 2rem;
-    column-rule: 0.07rem solid #ccc; /* Optional: visual divider */
+    /*column-rule: 0.07rem solid #ccc; !* Optional: visual divider *!*/
     
 }  
 
@@ -221,11 +256,40 @@ strong {
 .heterocyst-figure {
     display: inside;
     justify-content: center;
-    max-width: 40%;
+    max-width: 35%;
     height: auto;
     margin: 0 auto 20px;
 }
 
 .cyanobacteria-text {
     padding-right:20rem;
+}
+
+.microscopy-body {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    margin-right:5%;
+    margin-left:0;
+    margin-top:0;
+}
+.microscopy-figure {
+    margin-top:0;
+
+}
+.marine-figures {
+    margin-left:5%;
+}
+
+.marine-body {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+}
+
+.publication-body {
+    margin-right:40%;
+
+}
+
+ol li {
+    text-align: justify;
 }
